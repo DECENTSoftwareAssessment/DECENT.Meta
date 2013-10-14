@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DECENT/src-gen" creationSubmenus="true" modelPluginID="DECENT"
+    modelName="DECENTv2" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false" optimizedHasChildren="true" runtimePlatform="RCP">
+  <foreignModel>DECENTv2.ecore</foreignModel>
+  <genPackages prefix="DECENT" disposableProviderFactory="true" ecorePackage="DECENTv2.ecore#/">
+    <genClasses ecoreClass="DECENTv2.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Model/projects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Model/artifactTypeHierarchy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Model/agentPool"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Model/attributePool"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Element/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//AgentPool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//AgentPool/agents"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//AttributePool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//AttributePool/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//ArtifactTypeHierarchy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//ArtifactTypeHierarchy/types"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//ArtifactType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//ArtifactType/containerTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Project">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Project/agents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Project/location"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Agent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Agent/eMail"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Agent/projects"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Agent/activities"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Location">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Location/type"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DECENTv2.ecore#//Location/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Location/rootArtifact"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Artifact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Artifact/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Artifact/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Artifact/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Artifact/states"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Artifact/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//State">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/artifact"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/activity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/fromActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/next"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/previous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/values"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/derivedNext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//State/derivedPrevious"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//State/derivedDate"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Activity/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Activity/agent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Activity/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Activity/targetState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Activity/deltas"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Activity/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Activity/values"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Attribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Attribute/artifactTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Value/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Value/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Value/stringContent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Value/ofAttribute"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DECENTv2.ecore#//Value/inState"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//Delta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Delta/activity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Delta/onAttribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Delta/targetValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//Delta/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//Delta/change"/>
+    </genClasses>
+    <genClasses ecoreClass="DECENTv2.ecore#//ActivityValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//ActivityValue/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DECENTv2.ecore#//ActivityValue/stringContent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DECENTv2.ecore#//ActivityValue/ofAttribute"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DECENTv2.ecore#//ActivityValue/activity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

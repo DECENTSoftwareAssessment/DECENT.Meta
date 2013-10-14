@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/FAMIX.Model/src" modelPluginID="FAMIX" modelName="FAMIX"
+    modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>FAMIX.ecore</foreignModel>
+  <genPackages prefix="FAMIX" disposableProviderFactory="true" ecorePackage="FAMIX.ecore#/">
+    <genClasses ecoreClass="FAMIX.ecore#//AnchoredElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AnchoredElement/sourceAnchor_IN_FileAnchor"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//AbstractInvocationReceiver">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractInvocationReceiver/Invocation_OF_candidates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractInvocationReceiver/Invocation_OF_sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractInvocationReceiver/Invocation_OF_receiver"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//AbstractVariableReceiver">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractVariableReceiver/Access_OF_variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractVariableReceiver/Access_OF_receiver"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//AbstractBehaviouralEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/ALD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/ATFD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/CYCLO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/DR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/ICDO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/ICIO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/LDA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/LOC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/LOCOMM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/MAXNESTING"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/NOAV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/NOOC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/NOPAR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/OCDO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/OCIO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/isPublic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractBehaviouralEntity/signature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractBehaviouralEntity/declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractBehaviouralEntity/LocalVariable_OF_parentBehaviouralEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractBehaviouralEntity/Parameter_OF_parentBehaviouralEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractBehaviouralEntity/Access_OF_accessor"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//AbstractDeclaredType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/GlobalVariable_OF_declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/LocalVariable_OF_declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/Parameter_OF_declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/BehaviouralEntity_OF_declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/Attribute_OF_declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//AbstractDeclaredType/Arguments_OF_declaredType"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//AbstractMeasurableDeclaredType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/AMW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/BOvR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/BUR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/CBO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/CPFD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/CW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/DIT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/LCC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/LCOM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NAS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOACCM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOAM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOCHLD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOPRTA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOPRTM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOPUBA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOPUBM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/NOVRM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/PNAS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/RFC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/SPIDX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/TCC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//AbstractMeasurableDeclaredType/WOC"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Access">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Access/isWrite"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Access/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Access/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Access/accessor"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Attribute/hasClassScope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Attribute/isFinal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Attribute/isPrivate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Attribute/isProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Attribute/isPublic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Attribute/parentType_IN_Class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Attribute/declaredType"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//CSourceLanguage"/>
+    <genClasses ecoreClass="FAMIX.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Class/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Class/isStub"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/Method_OF_parentType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/Attribute_OF_parentType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/Inheritance_OF_subclass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/Inheritance_OF_superclass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/TypeAlias_OF_aliasedType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/container_IN_Namespace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Class/parentPackage_IN_Package"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//ParameterizableClass">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//ParameterizableClass/ParameterizedType_OF_ParameterizableClass"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//ParameterType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//ParameterType/container_IN_Namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//ParameterizedType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//ParameterizedType/arguments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//ParameterizedType/parameterizableClass"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Enum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Enum/container_IN_Namespace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Enum/EnumValue_OF_parentEnum"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//EnumValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//EnumValue/parentEnum_IN_Enum"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//FileAnchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//FileAnchor/endColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//FileAnchor/endLine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//FileAnchor/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//FileAnchor/startColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//FileAnchor/startLine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//FileAnchor/anchoredElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//FileAnchor/FunctionSignature_OF_sourceAnchor"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Function/OCIO_POLY"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Function/signatureSourceAnchor_IN_FileAnchor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Function/parentModule_IN_Module"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Function/parentScope_IN_Namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//GlobalVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//GlobalVariable/declaredType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//GlobalVariable/parentModule_IN_Module"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//GlobalVariable/container_IN_Namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Inheritance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Inheritance/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Inheritance/subclass_IN_Class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Inheritance/superclass_IN_Class"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Invocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Invocation/signature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Invocation/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Invocation/candidates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Invocation/sender"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//LocalVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//LocalVariable/parentBehaviouralEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//LocalVariable/declaredType"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/hasClassScope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isConstructor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isPrivate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isProtected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isPureAccessor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Method/isVirtual"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Method/parentType_IN_Class"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/CPFD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/NOF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/NOGF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/NOGV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/TCC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Module/WOC"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Module/Function_OF_parentModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Module/GlobalVariable_OF_parentModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Module/parentPackage_IN_Package"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Namespace">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/parentScope_IN_Namespace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/Function_OF_parentScope"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/Namespace_OF_parentScope"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/GlobalVariable_OF_container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/Class_OF_container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/Enum_OF_container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Namespace/ParameterType_OF_container"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Package">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Package/TypeAlias_OF_parentPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Package/Module_OF_parentPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Package/Class_OF_parentPackage"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FAMIX.ecore#//Parameter/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Parameter/parentBehaviouralEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//Parameter/declaredType"/>
+    </genClasses>
+    <genClasses ecoreClass="FAMIX.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="FAMIX.ecore#//TypeAlias">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//TypeAlias/aliasedType_IN_Class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FAMIX.ecore#//TypeAlias/parentPackage_IN_Package"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="AbstractDECENTProvider" disposableProviderFactory="true" ecorePackage="AbstractDECENTProvider.ecore#/">
+    <genClasses ecoreClass="AbstractDECENTProvider.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AbstractDECENTProvider.ecore#//AbstractElement/revisionId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AbstractDECENTProvider.ecore#//AbstractElement/GUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AbstractDECENTProvider.ecore#//AbstractElement/water"/>
+    </genClasses>
+    <genClasses ecoreClass="AbstractDECENTProvider.ecore#//Water">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AbstractDECENTProvider.ecore#//Water/content"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference AbstractDECENTProvider.ecore#//Water/element"/>
+    </genClasses>
+    <genClasses ecoreClass="AbstractDECENTProvider.ecore#//AbstractNamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AbstractDECENTProvider.ecore#//AbstractNamedElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AbstractDECENTProvider.ecore#//AbstractNamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AbstractDECENTProvider.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AbstractDECENTProvider.ecore#//Model/elements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
