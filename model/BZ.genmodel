@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/BZ.Model/src" modelPluginID="BZ" modelName="BZ"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>BZ.ecore</foreignModel>
+  <genPackages prefix="BZ" disposableProviderFactory="true" ecorePackage="BZ.ecore#/">
+    <genClasses ecoreClass="BZ.ecore#//BZRepo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZRepo/repoURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BZ.ecore#//BZRepo/products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BZ.ecore#//BZRepo/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BZ.ecore#//BZRepo/issues"/>
+    </genClasses>
+    <genClasses ecoreClass="BZ.ecore#//BZProduct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZProduct/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZProduct/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZProduct/URL"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference BZ.ecore#//BZProduct/repo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BZ.ecore#//BZProduct/components"/>
+    </genClasses>
+    <genClasses ecoreClass="BZ.ecore#//BZComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZComponent/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZComponent/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZComponent/URL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZComponent/defaultAssignee"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BZ.ecore#//BZComponent/product"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference BZ.ecore#//BZComponent/repo"/>
+    </genClasses>
+    <genClasses ecoreClass="BZ.ecore#//BZIssue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/URL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/repoURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/product"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/component"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/classification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/platform"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/importance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/milestone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/assignedTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/keywords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/referenceURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/dependsOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/blocks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/reportedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/reportedByUsername"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/reportedOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/lastModifiedOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/ccList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/seeAlso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/latestCommitURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZIssue/versionFixedIn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference BZ.ecore#//BZIssue/repo"/>
+    </genClasses>
+    <genClasses ecoreClass="BZ.ecore#//BZComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZComment/repoURL"/>
+    </genClasses>
+    <genClasses ecoreClass="BZ.ecore#//BZEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BZ.ecore#//BZEvent/repoURL"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
