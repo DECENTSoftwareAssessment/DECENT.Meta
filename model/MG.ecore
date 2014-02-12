@@ -201,6 +201,15 @@
         eType="#//Revision" eOpposite="#//Revision/hunks"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hunkBlame" ordered="false"
         upperBound="-1" eType="#//HunkBlames" eOpposite="#//HunkBlames/hunk"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="difference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="old_start_line_normalized"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="old_end_line_normalized"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_start_line_normalized"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_end_line_normalized"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HunkBlames">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hunk" lowerBound="1" eType="#//Hunk"
