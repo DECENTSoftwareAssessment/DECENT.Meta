@@ -90,7 +90,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" upperBound="-1"
         eType="#//State" eOpposite="#//State/next"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
-        eType="#//Value" containment="true" eOpposite="#//Value/inState"/>
+        eType="#//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -104,7 +104,7 @@
         eType="#//Delta" containment="true" eOpposite="#//Delta/activity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
-        eType="#//ActivityValue" containment="true" eOpposite="#//ActivityValue/activity"/>
+        eType="#//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactTypes" ordered="false"
@@ -115,8 +115,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ofAttribute" lowerBound="1"
         eType="#//Attribute"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inState" lowerBound="1"
-        eType="#//State" eOpposite="#//State/values"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntegerValue" eSuperTypes="#//Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -146,16 +144,8 @@
         eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetValue" lowerBound="1"
         eType="#//Value"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceValue" lowerBound="1"
+        eType="#//Value"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="change" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ActivityValue">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stringContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ofAttribute" lowerBound="1"
-        eType="#//Attribute"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-        eType="#//Activity" eOpposite="#//Activity/values"/>
   </eClassifiers>
 </ecore:EPackage>
