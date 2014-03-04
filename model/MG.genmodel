@@ -133,6 +133,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/file"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/revision"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/hunkBlame"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/difference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_start_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_end_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_start_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_end_line_normalized"/>
     </genClasses>
     <genClasses ecoreClass="MG.ecore#//HunkBlames">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//HunkBlames/hunk"/>
