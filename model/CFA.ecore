@@ -5,15 +5,25 @@
     <details key="MG" value="MG.ecore#/"/>
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="CFN">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalStates" upperBound="-1"
+        eType="#//GlobalState" containment="true" eOpposite="#//GlobalState/cfn"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalState">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hunks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixesWeightFactor" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bugFix" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weightFactor" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalBugWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageBugWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cfn" eType="#//CFN" eOpposite="#//CFN/globalStates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixes" upperBound="-1"
         eType="#//GlobalState" eOpposite="#//GlobalState/causes"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"

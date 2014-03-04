@@ -6,166 +6,177 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>CFA.ecore</foreignModel>
   <genPackages prefix="CFA" disposableProviderFactory="true" ecorePackage="CFA.ecore#/">
-    <genClasses ecoreClass="CFA.ecore#//CauseFix"/>
-    <genClasses ecoreClass="CFA.ecore#//State">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//State/totalWeight"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//State/averageWeight"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//State/fixes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//State/causes"/>
+    <genClasses ecoreClass="CFA.ecore#//CFN">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//CFN/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CFA.ecore#//CFN/globalStates"/>
     </genClasses>
-    <genClasses ecoreClass="CFA.ecore#//Activity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//Activity/causeWeight"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//Activity/fixWeight"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//Activity/cause"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//Activity/fix"/>
+    <genClasses ecoreClass="CFA.ecore#//GlobalState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/hunks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/bugFix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/weightFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/totalWeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/totalBugWeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/averageWeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CFA.ecore#//GlobalState/averageBugWeight"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CFA.ecore#//GlobalState/cfn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//GlobalState/fixes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//GlobalState/causes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CFA.ecore#//GlobalState/revision"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="MG" ecorePackage="http://MG/1.0#/">
-    <genClasses ecoreClass="http://MG/1.0#//Model">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Model/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Model/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Model/uri"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/people"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/revisions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/actions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/files"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/branches"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/fileTypes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/fileLinks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/fileCopies"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://MG/1.0#//Model/tags"/>
+  <genPackages prefix="MG" ecorePackage="MG.ecore#/">
+    <genClasses ecoreClass="MG.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Model/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Model/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Model/uri"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/people"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/revisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/branches"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/fileTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/fileLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/fileCopies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MG.ecore#//Model/tags"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//People">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//People/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//People/email"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//People/revisionsCommitted"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//People/revisionsAuthored"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//People/blames"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//People/repository"/>
+    <genClasses ecoreClass="MG.ecore#//People">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//People/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//People/email"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//People/revisionsCommitted"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//People/revisionsAuthored"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//People/blames"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//People/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Revision">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/commit_id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/rev"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/message"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/author_date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/commit_date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/composed_rev"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/file_count"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Revision/is_bug_fix"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/author"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/committer"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/actions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/fileLinks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/tags"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/patches"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/patchLines"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/lineBlames"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/linesToBeBlamed"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/hunks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/hunkBlames"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/content"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/blames"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//Revision/repository"/>
+    <genClasses ecoreClass="MG.ecore#//Revision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/commit_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/rev"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/author_date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/commit_date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/composed_rev"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/file_count"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Revision/is_bug_fix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/author"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/committer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/actions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/fileLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/tags"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/patches"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/patchLines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/lineBlames"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/linesToBeBlamed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/hunks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/hunkBlames"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/content"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Revision/blames"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//Revision/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Action">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Action/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Action/current_file_path"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Action/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Action/revision"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Action/branch"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//Action/repository"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Action/copy"/>
+    <genClasses ecoreClass="MG.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Action/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Action/current_file_path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Action/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Action/revision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Action/branch"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//Action/repository"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Action/copy"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Branch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Branch/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Branch/actions"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//Branch/repository"/>
+    <genClasses ecoreClass="MG.ecore#//Branch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Branch/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Branch/actions"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//Branch/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//File">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//File/file_name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//File/file_type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/actions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/childrenLinks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/parentLinks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/copiesTo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/copiesFrom"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/patches"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/patcheLines"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/lineBlames"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/hunks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/content"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//File/blames"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//File/repository"/>
+    <genClasses ecoreClass="MG.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//File/file_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//File/file_type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/actions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/childrenLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/parentLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/copiesTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/copiesFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/patches"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/patcheLines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/lineBlames"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/hunks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/content"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//File/blames"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//File/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//FileCopy">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//FileCopy/new_file_name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileCopy/action"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileCopy/toFile"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileCopy/fromFile"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileCopy/fromRevision"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//FileCopy/repository"/>
+    <genClasses ecoreClass="MG.ecore#//FileCopy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//FileCopy/new_file_name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileCopy/action"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileCopy/toFile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileCopy/fromFile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileCopy/fromRevision"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//FileCopy/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//FileLink">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileLink/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileLink/child"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileLink/revision"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//FileLink/repository"/>
+    <genClasses ecoreClass="MG.ecore#//FileLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileLink/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileLink/child"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileLink/revision"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//FileLink/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//FileType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//FileType/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//FileType/files"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//FileType/repository"/>
+    <genClasses ecoreClass="MG.ecore#//FileType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//FileType/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//FileType/files"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//FileType/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Tag">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Tag/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Tag/revision"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://MG/1.0#//Tag/repository"/>
+    <genClasses ecoreClass="MG.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Tag/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Tag/revision"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MG.ecore#//Tag/repository"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Patch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Patch/patch"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Patch/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Patch/revision"/>
+    <genClasses ecoreClass="MG.ecore#//Patch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Patch/patch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Patch/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Patch/revision"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//PatchLines">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//PatchLines/added"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//PatchLines/removed"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//PatchLines/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//PatchLines/revision"/>
+    <genClasses ecoreClass="MG.ecore#//PatchLines">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//PatchLines/added"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//PatchLines/removed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//PatchLines/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//PatchLines/revision"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//LineBlames">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//LineBlames/end"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//LineBlames/start"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//LineBlames/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//LineBlames/lastChangeRevision"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//LineBlames/revision"/>
+    <genClasses ecoreClass="MG.ecore#//LineBlames">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//LineBlames/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//LineBlames/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//LineBlames/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//LineBlames/lastChangeRevision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//LineBlames/revision"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Hunk">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Hunk/bug_introducing"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Hunk/new_end_line"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Hunk/new_start_line"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Hunk/old_end_line"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Hunk/old_start_line"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Hunk/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Hunk/revision"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Hunk/hunkBlame"/>
+    <genClasses ecoreClass="MG.ecore#//Hunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/bug_introducing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_end_line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_start_line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_end_line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_start_line"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/revision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Hunk/hunkBlame"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/difference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_start_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/old_end_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_start_line_normalized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Hunk/new_end_line_normalized"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//HunkBlames">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//HunkBlames/hunk"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//HunkBlames/lastRevision"/>
+    <genClasses ecoreClass="MG.ecore#//HunkBlames">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//HunkBlames/hunk"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//HunkBlames/lastRevision"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Content">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Content/content"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Content/loc"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Content/size"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Content/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Content/revision"/>
+    <genClasses ecoreClass="MG.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Content/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Content/loc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Content/size"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Content/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Content/revision"/>
     </genClasses>
-    <genClasses ecoreClass="http://MG/1.0#//Blame">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://MG/1.0#//Blame/lineCount"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Blame/file"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Blame/author"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://MG/1.0#//Blame/revision"/>
+    <genClasses ecoreClass="MG.ecore#//Blame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MG.ecore#//Blame/lineCount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Blame/file"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Blame/author"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MG.ecore#//Blame/revision"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
