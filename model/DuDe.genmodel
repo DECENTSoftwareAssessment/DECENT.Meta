@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DuDe.Model/src" modelPluginID="DuDe" modelName="DuDe"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>DuDe.ecore</foreignModel>
+  <genPackages prefix="DuDe" disposableProviderFactory="true" ecorePackage="DuDe.ecore#/">
+    <genClasses ecoreClass="DuDe.ecore#//Run">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/branch_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/commit_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/cvsa_db"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/dude_db"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/ignore_comments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/max_lines_between"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/min_size_dup_chain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/min_size_exact_chunk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/process_all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/store_content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/strategy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/sub_path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//Run/threshold"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DuDe.ecore#//Run/fragments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DuDe.ecore#//Run/pairs"/>
+    </genClasses>
+    <genClasses ecoreClass="DuDe.ecore#//CodeFragment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/signature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/start_line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/end_line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/file_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//CodeFragment/commit_id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DuDe.ecore#//CodeFragment/run"/>
+    </genClasses>
+    <genClasses ecoreClass="DuDe.ecore#//ClonePair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//ClonePair/signature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//ClonePair/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//ClonePair/commit_id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DuDe.ecore#//ClonePair/fragment1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DuDe.ecore#//ClonePair/fragment2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//ClonePair/file_coverage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DuDe.ecore#//ClonePair/length"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DuDe.ecore#//ClonePair/run"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
