@@ -57,6 +57,25 @@
         eType="#//Project" eOpposite="#//Project/agents"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
         eType="#//Activity" containment="true" eOpposite="#//Activity/agent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//AgentState" containment="true" eOpposite="#//AgentState/agent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentState" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agent" lowerBound="1" eType="#//Agent"
+        eOpposite="#//Agent/states"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity" eOpposite="#//Activity/agentState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//AgentState"
+        eOpposite="#//AgentState/previous"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//AgentState"
+        eOpposite="#//AgentState/next"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
+        eType="#//AttributeEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeEntry" instanceClassName="java.util.Map$Entry"
+      eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" eType="#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Value"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ArtifactType"/>
@@ -85,10 +104,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" lowerBound="1"
         eType="#//Artifact" eOpposite="#//Artifact/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" ordered="false"
-        upperBound="-1" eType="#//Activity" eOpposite="#//Activity/state"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fromActivity" ordered="false"
-        upperBound="-1" eType="#//Activity" eOpposite="#//Activity/targetState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" upperBound="-1"
+        eType="#//Activity" eOpposite="#//Activity/state"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromActivity" upperBound="-1"
+        eType="#//Activity" eOpposite="#//Activity/targetState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" upperBound="-1" eType="#//State"
         eOpposite="#//State/previous"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" upperBound="-1"
@@ -109,6 +128,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
         eType="#//Value" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agentState" eType="#//AgentState"
+        eOpposite="#//AgentState/activities"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityType" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" ordered="false"
