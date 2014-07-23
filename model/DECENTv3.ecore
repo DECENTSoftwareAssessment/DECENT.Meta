@@ -71,6 +71,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//AgentState"
         eOpposite="#//AgentState/next"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
+        eType="#//Value" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valuesMap" upperBound="-1"
         eType="#//AttributeEntry" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeEntry" instanceClassName="java.util.Map$Entry"
