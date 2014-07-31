@@ -9,11 +9,39 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="globalStates" upperBound="-1"
         eType="#//GlobalState" containment="true" eOpposite="#//GlobalState/cfn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factors" upperBound="-1"
+        eType="#//Factor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Factor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FactorEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" eType="#//Factor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+        eType="#//AttributeEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" eType="#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+        defaultValueLiteral="0.0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factors" upperBound="-1"
+        eType="#//FactorEntry" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixes" upperBound="-1"
+        eType="#//State" eOpposite="#//State/causes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
+        eType="#//State" eOpposite="#//State/fixes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hunks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bugFix" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
@@ -23,10 +51,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalBugWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageBugWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fixes" upperBound="-1"
-        eType="#//State" eOpposite="#//State/causes"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
-        eType="#//State" eOpposite="#//State/fixes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalState" eSuperTypes="#//State">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cfn" eType="#//CFN" eOpposite="#//CFN/globalStates"/>
