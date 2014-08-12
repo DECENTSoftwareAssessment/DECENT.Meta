@@ -77,8 +77,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ArtifactType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
         eType="#//Project" eOpposite="#//Project/location"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rootArtifact" lowerBound="1"
-        eType="#//Artifact" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" ordered="false"
+        upperBound="-1" eType="#//Artifact" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
