@@ -57,8 +57,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cfn" eType="#//CFN" eOpposite="#//CFN/globalStates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactStates" upperBound="-1"
         eType="#//ArtifactState" containment="true" eOpposite="#//ArtifactState/globalState"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalStates" ordered="false"
-        upperBound="-1" eType="#//LogicalState" eOpposite="#//LogicalState/globalState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalStates" upperBound="-1"
+        eType="#//LogicalState" containment="true" eOpposite="#//LogicalState/globalState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="revision" eType="ecore:EClass MG.ecore#//Revision"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArtifactState" eSuperTypes="#//CFAState">
@@ -66,10 +66,15 @@
         eOpposite="#//GlobalState/artifactStates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="file" eType="ecore:EClass MG.ecore#//File"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="ecore:EClass MG.ecore#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalStates" upperBound="-1"
+        eType="#//LogicalState" eOpposite="#//LogicalState/artifactState"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LogicalState" eSuperTypes="#//CFAState">
     <eStructuralFeatures xsi:type="ecore:EReference" name="globalState" eType="#//GlobalState"
         eOpposite="#//GlobalState/logicalStates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="ecore:EClass DECENTv3.ecore#//State"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" eType="ecore:EClass DECENTv3.ecore#//Artifact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifactState" eType="#//ArtifactState"
+        eOpposite="#//ArtifactState/logicalStates"/>
   </eClassifiers>
 </ecore:EPackage>
