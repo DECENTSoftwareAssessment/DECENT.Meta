@@ -62,6 +62,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//AgentState" containment="true" eOpposite="#//AgentState/agent"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Workload" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//AgentState"
+        eOpposite="#//AgentState/workload"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetState" eType="#//AgentState"
+        eOpposite="#//AgentState/fromWorkload"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity" eOpposite="#//Activity/workload"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deltas" upperBound="-1"
+        eType="#//Delta" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
+        eType="#//Value" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgentState" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agent" lowerBound="1" eType="#//Agent"
@@ -72,6 +84,10 @@
         eOpposite="#//AgentState/previous"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//AgentState"
         eOpposite="#//AgentState/next"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workload" eType="#//Workload"
+        containment="true" eOpposite="#//Workload/state"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromWorkload" eType="#//Workload"
+        eOpposite="#//Workload/targetState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
         eType="#//Value" containment="true"/>
   </eClassifiers>
@@ -120,12 +136,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetState" lowerBound="1"
         eType="#//State" eOpposite="#//State/fromActivity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deltas" upperBound="-1"
-        eType="#//Delta" containment="true" eOpposite="#//Delta/activity"/>
+        eType="#//Delta" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
         eType="#//Value" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agentState" eType="#//AgentState"
         eOpposite="#//AgentState/activities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workload" eType="#//Workload"
+        eOpposite="#//Workload/activities"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityType" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" ordered="false"
@@ -171,8 +189,6 @@
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Delta">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-        eType="#//Activity" eOpposite="#//Activity/deltas"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="onAttribute" lowerBound="1"
         eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetValue" eType="#//Value"/>
